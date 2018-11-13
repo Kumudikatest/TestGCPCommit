@@ -1,0 +1,87 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "ebd3601d-9d08-48da-81fb-f9b67b0ab6b9": {
+        "id": "ebd3601d-9d08-48da-81fb-f9b67b0ab6b9",
+        "parent": null,
+        "name": "TestGCPCommit",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "5a92500f-35c5-4e2e-8316-0d657070d017"
+        ],
+        "isRemovable": false,
+        "filePath": "TestGCPCommit"
+      },
+      "5a92500f-35c5-4e2e-8316-0d657070d017": {
+        "id": "5a92500f-35c5-4e2e-8316-0d657070d017",
+        "parent": "ebd3601d-9d08-48da-81fb-f9b67b0ab6b9",
+        "name": "function.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "TestGCPCommit/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        }
+      },
+      "0a62a01a-4178-494b-aa35-754019afa1ac": {
+        "id": "0a62a01a-4178-494b-aa35-754019afa1ac",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.TestGCPCommitfunction = require(\"./TestGCPCommit/function.js\").handler;",
+        "triggers": []
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "ebd3601d-9d08-48da-81fb-f9b67b0ab6b9",
+    "openFiles": [
+      "5a92500f-35c5-4e2e-8316-0d657070d017"
+    ],
+    "currentFileId": "5a92500f-35c5-4e2e-8316-0d657070d017",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {},
+        "globallyEditable": false
+      }
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    },
+    "lambdaId": "5a92500f-35c5-4e2e-8316-0d657070d017"
+  },
+  "PROJECT_META": {
+    "projectName": "TestGCPCommit",
+    "projectDescription": "test commit",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "lastSave": 1542098487921
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "TestGCPCommit",
+      "url": "https://github.com/Kumudikatest/TestGCPCommit"
+    }
+  }
+}
